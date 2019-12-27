@@ -7,6 +7,9 @@ TagManager:
   - Character
   - Map
   - CannonBall
+  - UnitButton
+  - SelectUnit
+  - Unit
   layers:
   - Default
   - TransparentFX
@@ -16,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - SelectUnit
+  - Character
+  - UnitPoint
+  - Road
   - 
   - 
   - 

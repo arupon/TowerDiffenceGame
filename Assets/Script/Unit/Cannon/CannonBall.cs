@@ -1,54 +1,59 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CannonBall : MonoBehaviour
 {
     /// <summary>
-    /// 弾が消えるまでの時間
+    /// 爆風
     /// </summary>
     [SerializeField]
-    private float destroyInterval;
+    private GameObject cannonBomb;
+
+    /// <summary>
+    /// 生成されているか
+    /// </summary>
+    private bool isInstntiate;
+
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    public void Start()
+    {
+        Debug.Log("CannonBall StartFunctio Start");
+
+        // 生成されていない
+        isInstntiate = false;
+        Debug.Log("CannonBall StartFunctio End");
+    }
+
+    /// <summary>
+    /// 更新処理
+    /// </summary>
+    public void Update()
+    {
+        Debug.Log("CannonBall UpdateFunctio Start");
+        Debug.Log("CannonBall UpdateFunctio End");
+    }
 
     /// <summary>
     /// 衝突判定
     /// </summary>
-    private bool destroyCheck;
-
-    // Start is called before the first frame update
-    public void Start()
-    {
-        //Debug.Log("CannonBall StartFunctio Start");
-
-        //球が消える判定
-        destroyCheck = false;
-
-        destroyInterval = 0.0f;
-
-        //Debug.Log("CannonBall StartFunctio End");
-    }
-
-    // Update is called once per frame
-    public void Update()
-    {
-        Debug.Log("CannonBall UpdateFunctio Start");
-        if (destroyCheck == true)
-        {
-            destroyInterval = destroyInterval - Time.deltaTime;
-        }
-
-        if (destroyCheck == true && destroyInterval <= 0)
-        {
-            Destroy(this.gameObject);
-        }
-        Debug.Log("CannonBall UpdateFunctio End");
-    }
-
+    /// <param name="collision">衝突対象</param>
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "Map")
+        // マップに衝突したら
+        if (collision.gameObject.tag == "Map")
         {
-            destroyCheck = true;
+            // 弾を削除
+            Destroy(gameObject);
+
+            // 爆風が発生していなければ
+            if(isInstntiate == false)
+            {
+                // 爆風を発生
+                Instantiate(cannonBomb, transform.position, Quaternion.identity);
+                // 発生している
+                isInstntiate = true;
+            }
         }
     }
 }

@@ -1099,6 +1099,42 @@
         <para>An array of spatializer names.</para>
       </returns>
     </member>
+    <member name="T:UnityEngine.AudioSettings.Mobile">
+      <summary>
+        <para>This class encapsulates properties and methods to handle audio output thread on iOS/Android.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.AudioSettings.Mobile.audioOutputStarted">
+      <summary>
+        <para>Returns true if audio output thread is working.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.AudioSettings.Mobile.muteState">
+      <summary>
+        <para>Returns true if current device media volume is 0.</para>
+      </summary>
+    </member>
+    <member name="P:UnityEngine.AudioSettings.Mobile.stopAudioOutputOnMute">
+      <summary>
+        <para>Set this property to true to make audio output thread automatically stop when device media volume is set to 0 and to start it again when volume is not 0.</para>
+      </summary>
+    </member>
+    <member name="?:UnityEngine.AudioSettings.Mobile.OnMuteStateChanged(System.Action`1&lt;System.Boolean&gt;)">
+      <summary>
+        <para>A delegate called whenever the device mute state is changed.</para>
+      </summary>
+      <param name="value">True if current device media volume is 0, false otherwise.</param>
+    </member>
+    <member name="M:UnityEngine.AudioSettings.Mobile.StartAudioOutput">
+      <summary>
+        <para>Starts audio output thread on Android/iOS.</para>
+      </summary>
+    </member>
+    <member name="M:UnityEngine.AudioSettings.Mobile.StopAudioOutput">
+      <summary>
+        <para>Stops audio thread on Android/iOS.</para>
+      </summary>
+    </member>
     <member name="?:UnityEngine.AudioSettings.OnAudioConfigurationChanged(UnityEngine.AudioSettings/AudioConfigurationChangeHandler)">
       <summary>
         <para>A delegate called whenever the global audio settings are changed, either by AudioSettings.Reset or by an external factor such as the OS control panel changing the sample rate or because the default output device was changed, for example when plugging in an HDMI monitor or a USB headset.</para>
@@ -1760,47 +1796,47 @@
     </member>
     <member name="T:UnityEngine.MovieTexture">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MovieTexture.audioClip">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MovieTexture.duration">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MovieTexture.isPlaying">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MovieTexture.isReadyToPlay">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.MovieTexture.loop">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.MovieTexture.Pause">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.MovieTexture.Play">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.MovieTexture.Stop">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="A:UnityEngine.AudioModule">

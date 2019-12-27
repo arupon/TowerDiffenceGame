@@ -50,31 +50,28 @@
     </member>
     <member name="T:UnityEngine.Networking.DownloadHandlerMovieTexture">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Networking.DownloadHandlerMovieTexture.movieTexture">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.Networking.DownloadHandlerMovieTexture.#ctor">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
     </member>
     <member name="M:UnityEngine.Networking.DownloadHandlerMovieTexture.GetContent(UnityEngine.Networking.UnityWebRequest)">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
-      <param name="uwr">A UnityWebRequest with attached DownloadHandlerMovieTexture.</param>
-      <returns>
-        <para>A MovieTexture created out of downloaded bytes.</para>
-      </returns>
+      <param name="uwr"></param>
     </member>
     <member name="M:UnityEngine.Networking.DownloadHandlerMovieTexture.GetData">
       <summary>
-        <para>MovieTexture has been deprecated. Refer to the new movie playback solution VideoPlayer.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
       <returns>
         <para>Raw downloaded bytes.</para>
@@ -97,12 +94,9 @@
     </member>
     <member name="M:UnityEngine.Networking.UnityWebRequestMultimedia.GetMovieTexture(System.String)">
       <summary>
-        <para>Create a UnityWebRequest intended to download a movie clip via HTTP GET and create an MovieTexture based on the retrieved data.</para>
+        <para>MovieTexture has been removed. Use VideoPlayer instead.</para>
       </summary>
-      <param name="uri">The URI of the movie clip to download.</param>
-      <returns>
-        <para>A UnityWebRequest properly configured to download a movie clip and convert it to a MovieTexture.</para>
-      </returns>
+      <param name="uri"></param>
     </member>
     <member name="A:UnityEngine.UnityWebRequestAudioModule">
       <summary>

@@ -222,10 +222,10 @@
     </member>
     <member name="M:UnityEngine.Font.GetPathsToOSFonts">
       <summary>
-        <para>Get the paths of OS installed fonts.</para>
+        <para>Gets the file paths of the fonts that are installed on the operating system.</para>
       </summary>
       <returns>
-        <para>An array of the pathes of all fonts installed on the machine.</para>
+        <para>An array of the file paths of all fonts installed on the machine.</para>
       </returns>
     </member>
     <member name="M:UnityEngine.Font.HasCharacter(System.Char)">
@@ -268,71 +268,6 @@
     <member name="F:UnityEngine.FontStyle.Normal">
       <summary>
         <para>No special style is applied.</para>
-      </summary>
-    </member>
-    <member name="T:UnityEngine.GUIText">
-      <summary>
-        <para>A text string displayed in a GUI.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.alignment">
-      <summary>
-        <para>The alignment of the text.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.anchor">
-      <summary>
-        <para>The anchor of the text.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.color">
-      <summary>
-        <para>The color used to render the text.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.font">
-      <summary>
-        <para>The font used for the text.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.fontSize">
-      <summary>
-        <para>The font size to use (for dynamic fonts).</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.fontStyle">
-      <summary>
-        <para>The font style to use (for dynamic fonts).</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.lineSpacing">
-      <summary>
-        <para>The line spacing multiplier.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.material">
-      <summary>
-        <para>The Material to use for rendering.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.pixelOffset">
-      <summary>
-        <para>The pixel offset of the text.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.richText">
-      <summary>
-        <para>Enable HTML-style tags for Text Formatting Markup.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.tabSize">
-      <summary>
-        <para>The tab width multiplier.</para>
-      </summary>
-    </member>
-    <member name="P:UnityEngine.GUIText.text">
-      <summary>
-        <para>The text to display.</para>
       </summary>
     </member>
     <member name="T:UnityEngine.HorizontalWrapMode">

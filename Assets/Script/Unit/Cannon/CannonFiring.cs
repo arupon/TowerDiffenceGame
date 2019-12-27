@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CannonFiring : MonoBehaviour
 {
@@ -23,44 +21,57 @@ public class CannonFiring : MonoBehaviour
     private float throwAngle;
 
     /// <summary>
-    /// 射出するまでの時間
+    /// 射出するまでの時間(初期値)
     /// </summary>
     [SerializeField, Tooltip("射出するまでの時間を設定する")]
     private float attackInterval;
 
+    /// <summary>
+    /// 弾速
+    /// </summary>
+    [SerializeField]
+    private float speed;
+    
+    /// <summary>
+    /// 射出するまでの時間
+    /// </summary>
+    private float interval;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
     public void Start()
     {
         Debug.Log("CannonFiring StartFunctio Start");
 
-        // 当たり判定を取得
-        Collider collider = GetComponent<Collider>();
-
-        // 当たり判定が存在したら
-        if (collider != null)
-        {
-            // トリガーをOnにする
-            collider.isTrigger = true;
-        }
+        interval = attackInterval;
 
         Debug.Log("CannonFiring StartFunctio End");
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// 更新処理
+    /// </summary>
     public void Update()
     {
         Debug.Log("CannonFiring StartFunctio Start");
 
         // 射出するまでの時間を減少
-        attackInterval = attackInterval - Time.deltaTime;
+        interval = interval - Time.deltaTime;
 
         // 射出時間になれば
-        if(attackInterval <= 0)
+        if(interval <= 0)
         {
             // 射出
             Firing();
-            attackInterval = 3.0f;
+            interval = attackInterval;
+        }
+
+        // 標的がいれば
+        if(targetObject != null)
+        {
+            // 標的に方向を向ける
+            transform.LookAt(targetObject.transform);
         }
 
         Debug.Log("CannonFiring StartFunctio End");
@@ -75,7 +86,7 @@ public class CannonFiring : MonoBehaviour
         if (cannonBall != null && targetObject != null)
         {
             // cannonBallを作成
-            GameObject ball = Instantiate(cannonBall, this.transform.position, Quaternion.identity);
+            GameObject ball = Instantiate(cannonBall, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
 
             // 標的のオブジェクトの座標を取得
             Vector3 targetPosition = targetObject.transform.position;
@@ -84,7 +95,7 @@ public class CannonFiring : MonoBehaviour
             float angle = throwAngle;
 
             // CalculateVelocityメソッドから弾の移動量を取得
-            Vector3 velocity = CalculateVelocity(this.transform.position, targetPosition, angle);
+            Vector3 velocity = CalculateVelocity(transform.position, targetPosition, angle);
 
             // 弾のRigidbodyを取得
             Rigidbody rigidbody = ball.GetComponent<Rigidbody>();
@@ -109,10 +120,7 @@ public class CannonFiring : MonoBehaviour
         // 大砲から標的の距離を取得
         float x = Vector2.Distance(new Vector2(pointA.x, pointA.z), new Vector2(pointB.x, pointB.z));
         float y = pointA.y - pointB.y;
-
-        // 弾の速度を計算
-        float speed = Mathf.Sqrt(-Physics.gravity.y * Mathf.Pow(x, 2) / (2 * Mathf.Pow(Mathf.Cos(radian), 2) * (x * Mathf.Tan(radian) + y)));
-        
+       
         // 弾の速度が0だったら
         if(float.IsNaN(speed))
         {
