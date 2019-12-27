@@ -83,6 +83,12 @@
       </summary>
       <param name="contentLength">The value of the received Content-Length header.</param>
     </member>
+    <member name="M:UnityEngine.Networking.DownloadHandler.ReceiveContentLengthHeader(System.UInt64)">
+      <summary>
+        <para>Callback, invoked with a Content-Length header is received.</para>
+      </summary>
+      <param name="contentLength">The value of the received Content-Length header.</param>
+    </member>
     <member name="M:UnityEngine.Networking.DownloadHandler.ReceiveData(System.Byte[],System.Int32)">
       <summary>
         <para>Callback, invoked as data is received from the remote server.</para>
@@ -135,6 +141,14 @@
         <para>Creates a new instance and a file on disk where downloaded data will be written to.</para>
       </summary>
       <param name="path">Path to file to be written.</param>
+      <param name="append">When true, appends data to the given file instead of overwriting.</param>
+    </member>
+    <member name="M:UnityEngine.Networking.DownloadHandlerFile.#ctor(System.String,System.Boolean)">
+      <summary>
+        <para>Creates a new instance and a file on disk where downloaded data will be written to.</para>
+      </summary>
+      <param name="path">Path to file to be written.</param>
+      <param name="append">When true, appends data to the given file instead of overwriting.</param>
     </member>
     <member name="T:UnityEngine.Networking.DownloadHandlerScript">
       <summary>
@@ -372,7 +386,7 @@
     </member>
     <member name="P:UnityEngine.Networking.UnityWebRequest.chunkedTransfer">
       <summary>
-        <para>Indicates whether the UnityWebRequest system should employ the HTTP/1.1 chunked-transfer encoding method.</para>
+        <para>**Deprecated.**. HTTP2 and many HTTP1.1 servers don't support this; we recommend leaving it set to false (default).</para>
       </summary>
     </member>
     <member name="P:UnityEngine.Networking.UnityWebRequest.disposeCertificateHandlerOnDispose">

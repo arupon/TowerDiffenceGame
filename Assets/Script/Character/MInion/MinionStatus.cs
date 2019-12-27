@@ -1,20 +1,26 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
+/// <summary>
+/// ミニオンのステータス
+/// </summary>
 public class MinionStatus : MonoBehaviour
 {
+    // 体力
     [SerializeField]
     private int hp;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
     public void Start()
     {
-        //Debug.Log("MinionStatus StartFunction Start");
-        //Debug.Log("MinionStatus StartFunction Finish");
+        Debug.Log("MinionStatus StartFunction Start");
+        Debug.Log("MinionStatus StartFunction Finish");
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// 更新処理
+    /// </summary>
     public void Update()
     {
         Debug.Log("MinionStatus UpdateFunction Start");
@@ -27,11 +33,15 @@ public class MinionStatus : MonoBehaviour
         Debug.Log("MinionStatus UpdateFunction Finish");
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /// <summary>
+    /// 衝突処理
+    /// </summary>
+    /// <param name="other">衝突対象</param>
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "CannonBall")
+        if (other.gameObject.tag == "CannonBall")
         {
-            hp = hp - 500;
+            hp = hp - 50;
         }
     }
 }

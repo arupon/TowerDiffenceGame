@@ -165,6 +165,11 @@
         <para>Numerator of the pixel aspect ratio (num:den). (Read Only).</para>
       </summary>
     </member>
+    <member name="P:UnityEngine.Video.VideoClip.sRGB">
+      <summary>
+        <para>Whether the imported clip contains sRGB color data (Read Only).</para>
+      </summary>
+    </member>
     <member name="P:UnityEngine.Video.VideoClip.width">
       <summary>
         <para>The width of the images in the video clip in pixels. (Read Only).</para>
