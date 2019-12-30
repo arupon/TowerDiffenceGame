@@ -10,12 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 7251603046627180039}
   - component: {fileID: 8228707118772480851}
+  - component: {fileID: 1408041184}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7251603046627180039
 Transform:
@@ -43,3 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c662a2cf547422e49b5ee8d2320f89d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1408041184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441161482096148037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa49be626b97b064a99e41e981a411ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectCircle: {fileID: 4952541497026987625, guid: e3bbe83e838ab9b4f8818e42ffd4e96b,
+    type: 3}

@@ -13,7 +13,7 @@ public class CannonSet : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        
+
     }
 
     /// <summary>
@@ -21,13 +21,17 @@ public class CannonSet : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        
+
     }
 
     public void Onclick()
     {
-        GameObject selectObject = gameController.GetComponent<>().GetSelectObject();
+        GameObject selectObject = gameController.GetComponent<UnitAttachment>().GetUnit();
 
-        Instantiate(cannon, selectObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f), Quaternion.identity);
+        if (selectObject == null)
+        {
+            GameObject createObject = Instantiate(cannon, selectObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f), Quaternion.identity);
+            gameController.GetComponent<UnitAttachment>().SetUnit(createObject);
+        }
     }
 }
