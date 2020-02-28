@@ -65,13 +65,18 @@
     <Compile Include="Assets\Script\Character\MInion\MinionMove.cs" />
     <Compile Include="Assets\Script\Character\MInion\MinionStatus.cs" />
     <Compile Include="Assets\Script\Controller\ClickSelect.cs" />
+    <Compile Include="Assets\Script\Controller\MouseTracking.cs" />
     <Compile Include="Assets\Script\Controller\UnitAttachment.cs" />
+    <Compile Include="Assets\Script\Controller\UnitSelectClickAction.cs" />
     <Compile Include="Assets\Script\Controller\UnitSelectController.cs" />
     <Compile Include="Assets\Script\Player\Money.cs" />
+    <Compile Include="Assets\Script\Shader\SelectObject.cs" />
     <Compile Include="Assets\Script\UI\CannonSet.cs" />
+    <Compile Include="Assets\Script\UI\UnitButton.cs" />
     <Compile Include="Assets\Script\Unit\Cannon\CannonBall.cs" />
     <Compile Include="Assets\Script\Unit\Cannon\CannonBomb.cs" />
     <Compile Include="Assets\Script\Unit\Cannon\CannonFiring.cs" />
+    <Compile Include="Assets\Script\Unit\Cannon\CannonStatus.cs" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>C:/Users/arupon/Documents/TowerDiffence/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
