@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 8302308299594888966}
   - component: {fileID: 8302308299595855302}
   - component: {fileID: 2983318917023762822}
+<<<<<<< HEAD
   - component: {fileID: 1017385836}
+=======
+>>>>>>> origin/master
   m_Layer: 10
   m_Name: UnitPoint
   m_TagString: Map
@@ -95,6 +98,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8d2754fbe4cf63a43937c3236cc2fdec, type: 3}
+<<<<<<< HEAD
 --- !u!114 &1017385836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,3 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be2c209e03aac74999457a1ecd9afe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> origin/master

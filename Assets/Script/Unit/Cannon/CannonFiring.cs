@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 
+<<<<<<< HEAD
 /// <summary>
 /// 大砲の弾の弾道計算
 /// </summary>
+=======
+>>>>>>> origin/master
 public class CannonFiring : MonoBehaviour
 {
     /// <summary>
@@ -45,11 +48,19 @@ public class CannonFiring : MonoBehaviour
     /// </summary>
     public void Start()
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring Start Method Start");
 
         interval = attackInterval;
 
         Debug.Log("CannonFiring Start Method End");
+=======
+        Debug.Log("CannonFiring StartFunctio Start");
+
+        interval = attackInterval;
+
+        Debug.Log("CannonFiring StartFunctio End");
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -57,7 +68,11 @@ public class CannonFiring : MonoBehaviour
     /// </summary>
     public void Update()
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring Update Method Start");
+=======
+        Debug.Log("CannonFiring StartFunctio Start");
+>>>>>>> origin/master
 
         // 射出するまでの時間を減少
         interval = interval - Time.deltaTime;
@@ -67,8 +82,11 @@ public class CannonFiring : MonoBehaviour
         {
             // 射出
             Firing();
+<<<<<<< HEAD
 
             // 射出時間をリセット
+=======
+>>>>>>> origin/master
             interval = attackInterval;
         }
 
@@ -76,10 +94,17 @@ public class CannonFiring : MonoBehaviour
         if(targetObject != null)
         {
             // 標的に方向を向ける
+<<<<<<< HEAD
             // transform.LookAt(targetObject.transform);
         }
 
         Debug.Log("CannonFiring Update Method End");
+=======
+            transform.LookAt(targetObject.transform);
+        }
+
+        Debug.Log("CannonFiring StartFunctio End");
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -87,13 +112,20 @@ public class CannonFiring : MonoBehaviour
     /// </summary>
     private void Firing()
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring Firing Method Start");
 
+=======
+>>>>>>> origin/master
         // cannonBallとtargetObjectが設定されていれば
         if (cannonBall != null && targetObject != null)
         {
             // cannonBallを作成
+<<<<<<< HEAD
             GameObject ball = Instantiate(cannonBall, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+=======
+            GameObject ball = Instantiate(cannonBall, transform.position + new Vector3(0, 1, 0), Quaternion.identity);
+>>>>>>> origin/master
 
             // 標的のオブジェクトの座標を取得
             Vector3 targetPosition = targetObject.transform.position;
@@ -110,8 +142,11 @@ public class CannonFiring : MonoBehaviour
             // 弾に移動量を付与
             rigidbody.AddForce(velocity * rigidbody.mass, ForceMode.Impulse);
         }
+<<<<<<< HEAD
 
         Debug.Log("CannonFiring Firing Method End");
+=======
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -123,8 +158,11 @@ public class CannonFiring : MonoBehaviour
     /// <returns></returns>
     private Vector3 CalculateVelocity(Vector3 pointA, Vector3 pointB, float angle)
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring CalculateVelocity Method Start");
 
+=======
+>>>>>>> origin/master
         // 球の角度をラジアン値に変換
         float radian = angle * Mathf.PI / 180;
 
@@ -135,12 +173,20 @@ public class CannonFiring : MonoBehaviour
         // 弾の速度が0だったら
         if(float.IsNaN(speed))
         {
+<<<<<<< HEAD
             // うんち
             return Vector3.zero;
         }
 
         Debug.Log("CannonFiring CalculateVelocity Method End");
 
+=======
+            Debug.Log("うんち");
+            //うんち
+            return Vector3.zero;
+        }
+
+>>>>>>> origin/master
         // 弾の方向、速度を返す
         return new Vector3(pointB.x - pointA.x, x * Mathf.Tan(radian), pointB.z - pointA.z).normalized * speed;
     }
@@ -151,6 +197,7 @@ public class CannonFiring : MonoBehaviour
     /// <param name="other">相手のオブジェクト</param>
     public void OnTriggerEnter(Collider other)
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring OnTriggerEnter Method Start");
 
         // 範囲内に入ったオブジェクトのタグがCharacterであれば
@@ -161,6 +208,12 @@ public class CannonFiring : MonoBehaviour
         }
 
         Debug.Log("CannonFiring OnTriggerEnter Method End");
+=======
+        if(other.gameObject.tag == "Character")
+        {
+            targetObject = other.gameObject;
+        }
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -169,6 +222,7 @@ public class CannonFiring : MonoBehaviour
     /// <param name="other">相手のオブジェクト</param>
     public void OnTriggerExit(Collider other)
     {
+<<<<<<< HEAD
         Debug.Log("CannonFiring OnTriggerExit Method Start");
 
         // 範囲外に出たオブジェクトのタグがCharacterであれば
@@ -179,5 +233,11 @@ public class CannonFiring : MonoBehaviour
         }
 
         Debug.Log("CannonFiring OnTriggerExit Method End");
+=======
+        if (other.gameObject.tag == "Character")
+        {
+            targetObject = null;
+        }
+>>>>>>> origin/master
     }
 }

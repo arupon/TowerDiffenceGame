@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.UI;
 
 /// <summary>
@@ -15,10 +16,19 @@ public class CannonSet : MonoBehaviour
     /// <summary>
     /// 大砲オブジェクト
     /// </summary>
+=======
+
+public class CannonSet : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject gameController;
+
+>>>>>>> origin/master
     [SerializeField]
     private GameObject cannon;
 
     /// <summary>
+<<<<<<< HEAD
     /// 所持金オブジェクト
     /// </summary>
     [SerializeField]
@@ -31,16 +41,22 @@ public class CannonSet : MonoBehaviour
     private int unitCost;
 
     /// <summary>
+=======
+>>>>>>> origin/master
     /// 初期化処理
     /// </summary>
     private void Start()
     {
+<<<<<<< HEAD
         Debug.Log("CannonSet Start Method Start");
 
         // ボタンのテキストを変更
         GetComponentInChildren<Text>().text = "Cannon = " + unitCost;
 
         Debug.Log("CannonSet Start Method End");
+=======
+
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -48,6 +64,7 @@ public class CannonSet : MonoBehaviour
     /// </summary>
     private void Update()
     {
+<<<<<<< HEAD
         Debug.Log("CannonSet Update Method Start");
         Debug.Log("CannonSet Update Method End");
     }
@@ -86,5 +103,19 @@ public class CannonSet : MonoBehaviour
         }
 
         Debug.Log("CannonSet Onclick Method End");
+=======
+
+    }
+
+    public void Onclick()
+    {
+        GameObject selectObject = gameController.GetComponent<UnitAttachment>().GetUnit();
+
+        if (selectObject == null)
+        {
+            GameObject createObject = Instantiate(cannon, selectObject.transform.position + new Vector3(0.0f, 1.0f, 0.0f), Quaternion.identity);
+            gameController.GetComponent<UnitAttachment>().SetUnit(createObject);
+        }
+>>>>>>> origin/master
     }
 }

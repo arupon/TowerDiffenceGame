@@ -13,6 +13,7 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+<<<<<<< HEAD
     <CompilerResponseFile>
     </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
@@ -20,6 +21,13 @@
     <UnityVersion>2019.3.0f3</UnityVersion>
     <RootNamespace>
     </RootNamespace>
+=======
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2019.3.0f3</UnityVersion>
+    <RootNamespace></RootNamespace>
+>>>>>>> origin/master
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -635,6 +643,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Money.cs" />
     <Compile Include="Assets\Script\Character\MInion\MinionMove.cs" />
     <Compile Include="Assets\Script\Character\MInion\MinionStatus.cs" />
@@ -644,6 +653,8 @@
     <Compile Include="Assets\Script\Controller\UnitSelectController.cs" />
     <Compile Include="Assets\Script\Player\Money.cs" />
     <Compile Include="Assets\Script\UI\CannonSet.cs" />
+=======
+>>>>>>> origin/master
     <Compile Include="Packages\com.unity.shadergraph\Editor\Utilities\AssemblyInfo.cs" />
     <Compile Include="Packages\com.unity.shadergraph\Editor\Utilities\EnumInfo.cs" />
     <Compile Include="Packages\com.unity.shadergraph\Editor\Utilities\StringBuilderExtensions.cs" />
@@ -1002,7 +1013,13 @@
     <None Include="Packages\com.unity.timeline\Editor\StyleSheets\res\Timeline_DarkSkin.txt" />
     <None Include="Packages\com.unity.timeline\Editor\StyleSheets\res\Timeline_LightSkin.txt" />
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
 </Project>
+=======
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
+>>>>>>> origin/master
