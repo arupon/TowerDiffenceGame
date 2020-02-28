@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+<<<<<<< HEAD
 /// <summary>
 /// ユニットの設置
 /// </summary>
@@ -8,6 +9,10 @@ public class UnitAttachment : MonoBehaviour
     /// <summary>
     /// ユニット
     /// </summary>
+=======
+public class UnitAttachment : MonoBehaviour
+{
+>>>>>>> origin/master
     private GameObject unit;
 
     /// <summary>
@@ -15,9 +20,13 @@ public class UnitAttachment : MonoBehaviour
     /// </summary>
     private void Start()
     {
+<<<<<<< HEAD
         Debug.Log("UnitAttachment Start Method Start");
 
         Debug.Log("UnitAttachment Start Method End");
+=======
+        
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -25,6 +34,7 @@ public class UnitAttachment : MonoBehaviour
     /// </summary>
     private void Update()
     {
+<<<<<<< HEAD
         Debug.Log("UnitAttachment Update Method Start");
 
         Debug.Log("UnitAttachment Update Method End");
@@ -46,14 +56,33 @@ public class UnitAttachment : MonoBehaviour
 
     /// <summary>
     /// ユニットを取得
+=======
+        
+    }
+
+    /// <summary>
+    /// タイルにユニットを設置
+    /// </summary>
+    /// <param name="gameObject"></param>
+    public void SetUnit(GameObject gameObject)
+    {
+        unit = gameObject;
+    }
+
+    /// <summary>
+    /// ユニットを渡す
+>>>>>>> origin/master
     /// </summary>
     /// <returns>ユニット</returns>
     public GameObject GetUnit()
     {
+<<<<<<< HEAD
         Debug.Log("UnitAttachment GetUnit Method Start");
 
         Debug.Log("UnitAttachment GetUnit Method End");
 
+=======
+>>>>>>> origin/master
         return unit;
     }
 }

@@ -5,9 +5,12 @@
 /// </summary>
 public class UnitSelectController : MonoBehaviour
 {
+<<<<<<< HEAD
     /// <summary>
     /// 
     /// </summary>
+=======
+>>>>>>> origin/master
     private GameObject selectObject;
 
     /// <summary>

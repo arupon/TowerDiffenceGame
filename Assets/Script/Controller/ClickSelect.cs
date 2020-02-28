@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+<<<<<<< HEAD
 /// <summary>
 /// オブジェクトへのクリック処理
 /// </summary>
@@ -19,6 +20,13 @@ public class ClickSelect : MonoBehaviour
     /// <summary>
     /// 選択中のオブジェクト
     /// </summary>
+=======
+public class ClickSelect : MonoBehaviour
+{
+    [SerializeField]
+    private GameObject selectCircle;
+    private GameObject circle;
+>>>>>>> origin/master
     private GameObject selectObject;
 
     /// <summary>
@@ -26,9 +34,13 @@ public class ClickSelect : MonoBehaviour
     /// </summary>
     private void Start()
     {
+<<<<<<< HEAD
         Debug.Log("ClickSelect Start Method Start");
 
         Debug.Log("ClickSelect Start Method End");
+=======
+
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -36,6 +48,7 @@ public class ClickSelect : MonoBehaviour
     /// </summary>
     private void Update()
     {
+<<<<<<< HEAD
         Debug.Log("ClickSelect Update Method Start");
 
         // Playerが左クリックを押下したら
@@ -78,6 +91,31 @@ public class ClickSelect : MonoBehaviour
         }
 
         Debug.Log("ClickSelect Update Method End");
+=======
+        if (Input.GetMouseButtonDown(0))
+        {
+            int layerNo = LayerMask.NameToLayer("UnitPoint");
+            int layerMask = 1 << layerNo;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit = new RaycastHit();
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+            {
+                if (hit.collider.gameObject.tag == "Map")
+                {
+                    Destroy(circle);
+                    selectObject = hit.collider.gameObject;
+                    circle = Instantiate(selectCircle, selectObject.transform.position + new Vector3(0.0f, 0.75f, 0.0f), Quaternion.Euler(-90, 0, 0));
+                }
+            }
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            selectObject = null;
+            Destroy(circle);
+        }
+>>>>>>> origin/master
     }
 
     /// <summary>
@@ -86,11 +124,14 @@ public class ClickSelect : MonoBehaviour
     /// <returns>選択中のオブジェクト</returns>
     public GameObject GetSelectObject()
     {
+<<<<<<< HEAD
         Debug.Log("ClickSelect GetSelectObject Method Start");
 
         Debug.Log("ClickSelect GetSelectObject Method End");
 
         // 選択中のオブジェクトを取得
+=======
+>>>>>>> origin/master
         return selectObject;
     }
 }
