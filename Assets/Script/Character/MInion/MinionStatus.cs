@@ -46,11 +46,18 @@ public class MinionStatus : MonoBehaviour
     {
         Debug.Log("MinionStatus OnTriggerEnter Method Start");
 
-        // 衝突対象のタグがCannonBallであれば
-        if (other.gameObject.tag == "CannonBall")
+        switch (other.gameObject.tag)
         {
-            // ミニオンのHPを50減らす
-            hp = hp - 50;
+            // 衝突対象のタグがCannonBombであれば
+            case "CannonBomb":
+                // ミニオンのHPを50減らす
+                hp = hp - 50;
+                break;
+            // 衝突対象のタグがArrowであれば
+            case "Arrow":
+                // ミニオンのHPを25減らす
+                hp = hp - 25;
+                break;
         }
 
         Debug.Log("MinionStatus OnTriggerEnter Method End");

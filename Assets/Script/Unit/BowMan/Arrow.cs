@@ -3,14 +3,8 @@
 /// <summary>
 /// 大砲の弾が着弾した時の挙動
 /// </summary>
-public class CannonBall : MonoBehaviour
+public class Arrow : MonoBehaviour
 {
-    /// <summary>
-    /// 爆風オブジェクト
-    /// </summary>
-    [SerializeField]
-    private GameObject cannonBomb;
-
     /// <summary>
     /// 生成されているかの判定
     /// </summary>
@@ -47,20 +41,11 @@ public class CannonBall : MonoBehaviour
     {
         Debug.Log("CannonBall OnCollisionEnter Method Start");
 
-        // マップに衝突したら
-        if (other.gameObject.tag == "Map")
+        // マップかキャラクターに衝突したら
+        if (other.gameObject.tag == "Map" || other.gameObject.tag == "Character")
         {
-            // 弾を削除
+            // 矢を削除
             Destroy(gameObject);
-
-            // 爆風が発生していなければ
-            if (isInstntiate == false)
-            {
-                // 爆風を発生
-                Instantiate(cannonBomb, transform.position, Quaternion.identity);
-                // 発生している
-                isInstntiate = true;
-            }
         }
 
         Debug.Log("CannonBall OnCollisionEnter Method End");
