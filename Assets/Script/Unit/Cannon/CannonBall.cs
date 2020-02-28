@@ -1,37 +1,42 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// 大砲の弾が着弾した時の挙動
+/// </summary>
 public class CannonBall : MonoBehaviour
 {
     /// <summary>
-    /// 爆風
+    /// 爆風オブジェクト
     /// </summary>
     [SerializeField]
     private GameObject cannonBomb;
 
     /// <summary>
-    /// 生成されているか
+    /// 生成されているかの判定
     /// </summary>
     private bool isInstntiate;
 
     /// <summary>
     /// 初期化処理
     /// </summary>
-    public void Start()
+    private void Start()
     {
-        Debug.Log("CannonBall StartFunctio Start");
+        Debug.Log("CannonBall Start Method Start");
 
-        // 生成されていない
+        // 生成されていない判定
         isInstntiate = false;
-        Debug.Log("CannonBall StartFunctio End");
+
+        Debug.Log("CannonBall Start Method End");
     }
 
     /// <summary>
     /// 更新処理
     /// </summary>
-    public void Update()
+    private void Update()
     {
-        Debug.Log("CannonBall UpdateFunctio Start");
-        Debug.Log("CannonBall UpdateFunctio End");
+        Debug.Log("CannonBall Update Method Start");
+
+        Debug.Log("CannonBall Update Method End");
     }
 
     /// <summary>
@@ -40,6 +45,8 @@ public class CannonBall : MonoBehaviour
     /// <param name="collision">衝突対象</param>
     public void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("CannonBall OnCollisionEnter Method Start");
+
         // マップに衝突したら
         if (collision.gameObject.tag == "Map")
         {
@@ -47,7 +54,7 @@ public class CannonBall : MonoBehaviour
             Destroy(gameObject);
 
             // 爆風が発生していなければ
-            if(isInstntiate == false)
+            if (isInstntiate == false)
             {
                 // 爆風を発生
                 Instantiate(cannonBomb, transform.position, Quaternion.identity);
@@ -55,5 +62,7 @@ public class CannonBall : MonoBehaviour
                 isInstntiate = true;
             }
         }
+
+        Debug.Log("CannonBall OnCollisionEnter Method End");
     }
 }

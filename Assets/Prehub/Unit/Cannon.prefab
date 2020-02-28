@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 576845612948648108}
   - component: {fileID: 4790316978187328829}
   - component: {fileID: 6094285709342430270}
-  - component: {fileID: 5119198748447254730}
   - component: {fileID: 6452511891110624203}
   - component: {fileID: 1943906575102086407}
   m_Layer: 0
@@ -56,7 +55,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_MotionVectors: 1
+  m_MotionVectors: 0
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
@@ -110,19 +109,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5119198748447254730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2719797731528173967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f381307d23ac3a447a4d6d0f150fb56b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 500
 --- !u!114 &6452511891110624203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +126,7 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   throwAngle: 45
   attackInterval: 3
-  speed: 0
+  speed: 5
 --- !u!54 &1943906575102086407
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -155,5 +141,5 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
